@@ -4,7 +4,7 @@ provider "kubernetes" {
 
 resource "null_resource" "custom" {
   # change trigger to run every time
-  triggers {
+  triggers = {
     build_number = "${timestamp()}"
   }
 
